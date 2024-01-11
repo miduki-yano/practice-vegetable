@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+html{
+    margin: 0;
+    padding: 0;
+}/*全体の余白があれば消す*/
+
+body{
+    font-family: Arial,メイリオ;
+    margin: 0;
+}
+
+header{
+    align-items: center;/*flexアイテムを中央揃えに*/
+    background-color: #4caf50;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;/*flexアイテムを両端揃えで均等に配置*/
+}
+
+h1{
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 0 50px;/*上・右・下の余白を消して、左の余白を50pxに*/
+}
+
+nav>ul{
+    display: flex;
+    margin-right: 30px;
+}
+
+nav>ul>li{
+    color: #fff;
+    font-size: 16px;
+    list-style: none;/*リストの黒点をなくす*/
+    padding: 0 20px;/*上下のボーダー内の余白を消して、左右のボーダー内の余白を20pxに*/
+}
+
+@media screen and (max-width:960px){/*画面幅が960px以下の場合*/
+    h1{
+        margin-left: 20px;/*WAKABAのロゴの左に余白追加*/
+    }
+
+    nav>ul{
+        margin-right: 20px;/*About USとContactのセットの右に余白追加*/
+    }
+
+    nav>ul>li{
+        padding:0 10px;/*About UsとContactのそれぞれに上下のボーダー内の余白は消して、左右のボーダー内の余白は10pxに*/
+    }
+    
+}
+
+#main_img,#main_img>img{
+    width: 100%;
+}
+
+.subtitle{
+    font-family: HGPMinchoB;
+    margin: 40px 0;/*「いつもそばに」と「美味しい野菜を」の上下の余白を追加、左右の余白は消す*/
+    text-align: center;/*テキストを中央寄りに*/
+}
+
+.subtitle-top{/*「いつもそばに」の装飾*/
+    color: #3d3d3d;
+    display: block;/*ブロック要素となり、改行され横ラインになる感じで一行埋まる*/
+    font-size: 30px;
+    letter-spacing: 0.1em;/*文字の間を文字の高さの1/10に*/
+    margin-bottom: 10px;
+}
+
+.subtitle-bottom{
+    color: #4caf50;
+    font-size: 35px;
+    letter-spacing: 0.1em;
+}
+
+#description{
+    display: flex;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+#description img{
+    margin-left: 50px;/*トマトの写真の左側に余白追加*/
+    width: 50%;
+}
+
+.description-block{
+    margin-right: 50px;/*文章の右側に余白追加*/
+}
+
+#description h3{
+    color: #3d3d3d;
+    font-family: HGPMinchoB;
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    margin: 0 0 20px;/*上の余白を消し、左右の余白も消し、下の余白を20pxに*/
+    text-align: center;
+}
+
+#description p{
+    font-size: 18px;
+    margin: 0;
+}
+
+#btn{
+    margin: 40px auto;
+    max-width: 300px;
+    text-align: center;
+}
+
+.buy{
+    background-color: #ffa726;
+}
+
+.buy:hover{
+    background-color: #f6bc65;
+}
+
+.buy,.detail{
+    border-radius: 14px;
+    box-shadow: 0 3px 6px #00000029;
+    color: #fff;
+    font-size: 28px;
+    padding: 7px 20px
+}
+
+.detail{
+    background-color: #4caf50;
+    margin-top: 20px;
+}
+
+.detail:hover{
+    background-color: #70ae72;
+}
+
+@media screen and (max-width:960px) {
+    #description{
+        display: block;
+        margin: 40px auto;
+    }
+
+    #description img{
+        margin:0 20px;
+        width: calc(100% - 40px);/*計算で算出された値がimgの幅になる*/
+    }
+
+    #description h3{
+        margin: 20px auto 10px;
+    }
+
+    .description-block{
+        margin: 0 20px;
+    }
+    
+}
+
+footer{
+    background-color: #4caf50;
+    padding: 13px;
+    text-align: center;
+}
+
+
+footer .footer-title{
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+footer p{
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
